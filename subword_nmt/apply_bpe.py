@@ -360,6 +360,8 @@ def read_vocabulary(vocab_file, threshold):
     vocabulary = set()
 
     for line in vocab_file:
+        print(line)
+        print(line.strip('\r\n ').split(' '))
         word, freq = line.strip('\r\n ').split(' ')
         freq = int(freq)
         if threshold == None or freq >= threshold:
